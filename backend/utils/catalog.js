@@ -88,6 +88,7 @@ const CORE_INSTITUTES = [
 // ---- Other NIRF-ranked engineering colleges/universities (rank 1-200, 2025) ----
 // Only "name" is required; codes below are generated automatically from it.
 const OTHER_NAMES = [
+  "Techno Main's University, Kolkata",
   "Birla Institute of Technology and Science, Pilani",
   "SRM Institute of Science and Technology",
   "Vellore Institute of Technology",
