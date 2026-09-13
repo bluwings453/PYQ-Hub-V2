@@ -32,6 +32,8 @@ cp .env.example .env      # fill in MONGO_URI, JWT_SECRET, ADMIN_PASSWORD, CLOUD
 npm install
 npm run dev                # http://localhost:5000
 
+Hiii 
+
 # Terminal 2
 cd frontend
 cp .env.example .env       # VITE_API_BASE defaults to http://localhost:5000/api
