@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: #faf9f7;
+  --color-surface: #ffffff;
+  --color-hairline: #e3e0d6;
+  --color-ink: #1c2541;
+  --color-ink-soft: #5b6178;
+  --color-maroon: #7a1f2b;
+  --color-maroon-dark: #5c1620;
+  --color-maroon-light: #f3e4e4;
+  --color-gold: #b8862e;
+  --color-gold-light: #f6ecd9;
+  /* Stable label color for text sitting on a solid maroon button/badge -
+     deliberately NOT overridden below, since it must stay light in both themes. */
+  --color-on-maroon: #f7f3ec;
+
+  color-scheme: light;
+}
+
+:root.dark {
+  --color-paper: #14161c;
+  --color-surface: #1c1f27;
+  --color-hairline: #2e323d;
+  --color-ink: #f2f1ed;
+  --color-ink-soft: #9ca3b5;
+  --color-maroon: #c1485a;
+  --color-maroon-dark: #9e3547;
+  --color-maroon-light: #3a1e22;
+  --color-gold: #d9a64e;
+  --color-gold-light: #3a2e17;
+
+  color-scheme: dark;
+}
+
+body {
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+::selection {
+  background-color: theme("colors.gold.light");
+  color: theme("colors.ink");
+}
+
+/* Visible keyboard focus everywhere, styled instead of removed */
+:focus-visible {
+  outline: 2px solid theme("colors.maroon.DEFAULT");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
